@@ -26,7 +26,7 @@ function Login() {
       await axios.post(`${process.env.REACT_APP_MONGO_BASE_URL}/login`, data);
       toast.success("Login Succesfully!!", {
         autoClose: 1500,
-        onClose: () => window.location.reload(true),
+        onClose: () => window.location.reload(false),
       });
     } catch (error) {
       console.log("Login Err: ", error);
